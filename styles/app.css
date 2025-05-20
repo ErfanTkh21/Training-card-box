@@ -1,0 +1,115 @@
+@font-face {
+  font-family: 'Overpas Regular';
+  src: url(fonts/Overpass-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Overpas Semibold';
+  src: url(fonts/Overpass-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: 'Overpas Bold';
+  src: url(fonts/Overpass-Bold.ttf);
+}
+
+:root {
+  --White: hsl(0, 100%, 100%);
+  --Grey-500: hsl(217, 12%, 63%);
+  --Grey-850: hsl(213, 19%, 18%);
+  --Grey-900: hsl(212, 24%, 12%);
+  --Grey-950: hsl(216, 12%, 8%);
+  --Orange-500: hsl(25, 97%, 53%);
+
+}
+
+body {
+  font-family: 'Overpas Regular';
+  background: var(--Grey-950);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.feedback-container {
+  background: linear-gradient(to bottom, var(--Grey-850), var(--Grey-900));
+  font-size: 15px;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 322px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.star-icon {
+  margin-bottom: .5rem;
+  background: var(--Grey-850);
+  padding: 1rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: var(--White);
+  margin-bottom: 1rem;
+}
+
+p {
+  color: var(--Grey-500);
+  margin-bottom: 2rem;
+  font-size: 15px;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.rating-btn {
+  background: var(--Grey-850);
+  color: var(--Grey-500);
+  font-weight: bold;
+  font-size: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.rating-btn:hover {
+  background: #ddd;
+  color: var(--Grey-950);
+}
+
+.submit-btn {
+  background: var(--Orange-500);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--Grey-850);
+  font-family: 'Overpas Bold';
+  border: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: var(--White);
+}
+
+.rating-btn.selected {
+  background-color: var(--Orange-500);
+  color: var(--White);
+}
+
+@media screen and (max-width: 400px) {
+  .feedback-container {
+    max-width: 280px;
+  }
+}
